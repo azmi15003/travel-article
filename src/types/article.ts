@@ -1,3 +1,10 @@
+export interface Comment {
+  content: string;
+  user: {
+    username: string;
+  };
+}
+
 export interface Article {
   id: string | number
   documentId: string
@@ -6,7 +13,8 @@ export interface Article {
   publishedAt: string
   description: string
   createdAt: string
-  updatedAt: string
+  updatedAt: string,
+  comments: Comment[]
   category: {
     name?: string
     id: number

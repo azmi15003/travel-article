@@ -71,8 +71,9 @@ const { handleSubmit, errors } = useForm({
   validationSchema,
 });
 
-const {value: identifier} = useField('identifier')
-const {value: password} = useField('password')
+const { value: identifier } = useField<string>('identifier')
+const { value: password } = useField<string>('password')
+
 
 const onSubmit = handleSubmit(async (values) => {
   loading.value = true

@@ -27,7 +27,7 @@
             <strong>Address:</strong> Indonesia
           </p>
           <p class="text-sm text-gray-600">
-            <strong>Published at:</strong> {{ formatDate(article?.publishedAt) }}
+            <strong>Published at:</strong> {{ formatDate(article?.publishedAt ?? "-") }}
           </p>
         </div>
       </div>
@@ -85,7 +85,6 @@ const id = typeof idParam === 'string' ? idParam : idParam?.[0]
 
 const article = computed<Article | null>(() => articleStore.detail)
 const loading = computed(() => articleStore.loading)
-const error = computed(() => articleStore.detailError)
 
 const newReview = ref<{ username: string; content: string }>({
   username: '',

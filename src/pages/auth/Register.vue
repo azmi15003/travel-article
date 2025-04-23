@@ -68,7 +68,6 @@
   
 <script setup lang="ts">
   import { ref } from 'vue'
-  import { useRouter } from 'vue-router'
   import { useField, useForm } from 'vee-validate'
   import { toTypedSchema } from '@vee-validate/zod'
 	import { useAuthStore } from '@/store/auth'
@@ -76,7 +75,6 @@
   import AuthLayout from '@/layouts/AuthLayout.vue'
   import { Button } from '@/components/ui/button'
   
-  const router = useRouter()
   const loading = ref(false)
   const error = ref('')
   const authStore = useAuthStore()
